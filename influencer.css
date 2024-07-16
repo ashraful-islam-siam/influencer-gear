@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-bo;
+}
+body {
+  font-family: Arial;
+}
+/*Header styles*/
+header {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*Navbar styles*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.menu-bar {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+}
+
+/*banner styles*/
+.banner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-text h3 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.banner-text p {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+.banner-image {
+  width: 40%;
+  background-image: url('../images/Circle design.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner-image img {
+  width: 100%;
+}
+.btn-primary {
+  padding: 15px 20px;
+  border: none;
+  background-color: purple;
+  color: #fff;
+  border-radius: 8px;
+}
+
+/*
+ sponsors styles
+*/
+
+.sponsor-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px; 
+  max-width: 1000px; 
+  margin: 20px auto; 
+  padding: 20px; 
+  justify-items: center; 
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+} 
+
+
+/*Collection styles*/ 
+.collection-container {
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+} 
+
+.collection-content {
+  padding: 30px;
+}
+
+/*responsive media queries*/
+@media screen and (max-width: 576px) {
+  nav a, .fa-magnifying-glass {
+    display: none;
+  }
+  .menu-bar {
+    display: block;
+  }
+
+  .banner-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner-text {
+    margin-top: 50px;
+    order: 2;
+  }
+  .banner-text h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .banner-text p {
+    margin-top: 0;
+    font-size: 14px;
+  }
+
+  .banner-image {
+    order: 1;
+    width: 80%;
+  } 
+  
+  .sponsor-container {
+    grid-template-columns: repeat(3, 1fr); 
+    border: none;
+  } 
+  
+  .sponsor-container img {
+    width: 60%;
+  }
+  .collection-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
